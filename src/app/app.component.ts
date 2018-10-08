@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'my-app',
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'World';
-  animal = "dogs";
+  name = 'Tyler';
+  animal = "your new cat";
+  //testing
+  constructor(private http: HttpClient){
+
+  }
+
+  ngOnInit(): void{
+    this.http.get('http://mochijump.com/test/version').subscribe(data => {
+      console.log(data);
+    })
+
+  }
 }
