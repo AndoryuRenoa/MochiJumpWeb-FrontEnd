@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {LevelListService} from '../level-list-service.service';
 
 @Component({
   selector: 'level',
@@ -7,5 +8,16 @@ import { Component, Input } from '@angular/core';
 })
 
 export class LevelComponent  {
-  @Input() animal: string;
+  levels = level[];
+
+  constructor (private levelListService : LevelListService){};
+
+  ngOnInit(): void{
+    this.getLevels();
+  }
+
+  getLevels(){
+    this.levelListService.getConfig()
+    .subscribe( levels => this.levels=levels);
+  }
 }
