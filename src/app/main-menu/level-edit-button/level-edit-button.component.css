@@ -1,13 +1,19 @@
-	.container1{	
+
+ /* No luck shrinking the images in the bar is necessary maybe try angular flex layout?*/ 
+ 
+ 
+  .container1{	
     position: relative;
 	  width: 100%;
-	  display: inline-flex;
+	  display: flex;
 	  flex-direction: row;
-	  align-items: center;
+    justify-content: center;
 	}
 	.option1{
+   
 
 	}
+ 
 	.selectorimg1{
 	float: right;
 
