@@ -10,10 +10,13 @@ import { DrawLevelComponent } from './draw-level/draw-level.component';
 import { CanvasComponent } from './draw-level/canvas/canvas.component';
 import { DrawLevelMenuComponent } from './draw-level/draw-level-menu/draw-level-menu.component';
 import { AboutComponent } from './about/about.component';
+import { MochiFaceComponent } from './mochi-face/mochi-face.component';
+import { LevelEditButtonComponent } from './main-menu/level-edit-button/level-edit-button.component';
+import { AboutButtonComponent } from './main-menu/about-button/about-button.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, LoginComponent, MainMenuComponent, DrawLevelComponent, CanvasComponent, DrawLevelMenuComponent, AboutComponent ],
+  declarations: [ AppComponent, HelloComponent, LoginComponent, MainMenuComponent, DrawLevelComponent, CanvasComponent, DrawLevelMenuComponent, AboutComponent, MochiFaceComponent, LevelEditButtonComponent, AboutButtonComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

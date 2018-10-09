@@ -1,0 +1,17 @@
+	.container1{	
+    position: relative;
+	  width: 100%;
+	  display: inline-flex;
+	  flex-direction: row;
+	  align-items: center;
+	}
+	.option1{
+
+	}
+	.selectorimg1{
+	float: right;
+
+	}
+	.selector1, .right1{
+	  flex: 1;
+	}
