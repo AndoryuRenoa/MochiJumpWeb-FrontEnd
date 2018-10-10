@@ -14,19 +14,21 @@ import { MochiFaceComponent } from './mochi-face/mochi-face.component';
 import { LevelEditButtonComponent } from './main-menu/level-edit-button/level-edit-button.component';
 import { AboutButtonComponent } from './main-menu/about-button/about-button.component';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   {path: 'mainmenu', component: MainMenuComponent},
+  {path: 'levelEditor', component: DrawLevelComponent},
   { path: '',   redirectTo: '/mainmenu', pathMatch: 'full' }
 ];
 
 @NgModule({
     
 
-  imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(
+  imports:    [ BrowserModule, BrowserAnimationsModule, FormsModule, RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )

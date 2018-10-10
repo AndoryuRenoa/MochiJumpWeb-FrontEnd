@@ -1,7 +1,7 @@
 
-<div class ="container1">
-		<div class="selector1" id="selector1">
-			<img class= "selectorimg1" id="selectorimg1" src ="https://github.com/AndoryuRenoa/MochiJumpWeb-Backend/blob/master/MochiJumpLevelEditor2/src/main/resources/static/images/bone1M.png?raw=true" style ="visibility: hidden">
+<div class ="container1" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [@startAnimation] ="state" (@startAnimation.done)="onEnd($event)">
+		<div class="selector1" id="selector1"> 
+			<img class= "selectorimg1" id="selectorimg1" [src] = "selectorSRC" [ngStyle]="visibility">
 		</div>
 		<div class="option1" id="option1">
 			<a [routerLink]="['/about']">
