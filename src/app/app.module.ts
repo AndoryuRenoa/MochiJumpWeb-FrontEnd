@@ -15,6 +15,7 @@ import { LevelEditButtonComponent } from './main-menu/level-edit-button/level-ed
 import { AboutButtonComponent } from './main-menu/about-button/about-button.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   {path: 'mainmenu', component: MainMenuComponent},
   {path: 'levelEditor', component: DrawLevelComponent},
+  {path: 'signUp', component: SignUpComponent},
   { path: '',   redirectTo: '/mainmenu', pathMatch: 'full' }
 ];
 
@@ -33,7 +35,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
  ],
-  declarations: [ AppComponent, HelloComponent, LoginComponent, MainMenuComponent, DrawLevelComponent, CanvasComponent, DrawLevelMenuComponent, AboutComponent, MochiFaceComponent, LevelEditButtonComponent, AboutButtonComponent ],
+  declarations: [ AppComponent, HelloComponent, LoginComponent, MainMenuComponent, DrawLevelComponent, CanvasComponent, DrawLevelMenuComponent, AboutComponent, MochiFaceComponent, LevelEditButtonComponent, AboutButtonComponent, SignUpComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

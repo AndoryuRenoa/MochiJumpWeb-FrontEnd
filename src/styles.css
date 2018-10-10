@@ -1,6 +1,8 @@
 /* Add application styles & imports to this file! */
 
 	body {
+    font-family: lato;
+    margin: 0;
 		background-color: lightgray;
 	}
 	

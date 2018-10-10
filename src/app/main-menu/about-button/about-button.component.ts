@@ -15,8 +15,8 @@ import {
     trigger ('startAnimation', [
       state('loop1', style({})),
       state('loop2', style({})),
-      transition('loop1 => loop2', animate(100)),
-      transition('loop2 => loop1', animate(100)),
+      transition('loop1 => loop2', animate(200)),
+      transition('loop2 => loop1', animate(200)),
   ]),
   ]
 })
@@ -48,9 +48,12 @@ export class AboutButtonComponent implements OnInit {
         this.onAnimate();
         this.state = "loop2";
         console.log(this.counter);
+        console.log(this.selectorSRC);
       } else{
         this.onAnimate();
         this.state = "loop1";
+        console.log(this.counter);
+        console.log(this.selectorSRC);
       }
     }
    }

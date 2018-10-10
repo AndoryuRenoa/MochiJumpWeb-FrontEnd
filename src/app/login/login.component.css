@@ -1,1 +1,11 @@
-
+.loginBody{
+   position: relative;
+  margin:0px;
+  background-color :darkslategray;
+  overflow: hidden;
+}
+.loginForm{
+  margin:0px;
+  color:white;
+  text-align: right;
+}

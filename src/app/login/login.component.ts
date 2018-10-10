@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HelloComponent } from '../Hello.component';
+
 
 @Component({
   selector: 'app-login',
@@ -10,6 +12,9 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  destroyThis(){
+    name= "Change!"
   }
 
 }
