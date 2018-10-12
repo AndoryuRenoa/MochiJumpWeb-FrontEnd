@@ -16,6 +16,7 @@ import { AboutButtonComponent } from './main-menu/about-button/about-button.comp
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { ShowLoginService } from './show-login.service';
 
 
 
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
     )
  ],
   declarations: [ AppComponent, HelloComponent, LoginComponent, MainMenuComponent, DrawLevelComponent, CanvasComponent, DrawLevelMenuComponent, AboutComponent, MochiFaceComponent, LevelEditButtonComponent, AboutButtonComponent, SignUpComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [ShowLoginService]
 })
 export class AppModule { }
