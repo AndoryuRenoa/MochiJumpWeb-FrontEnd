@@ -17,6 +17,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ShowLoginService } from './show-login.service';
+import { LogoutComponent } from './logout/logout.component';
+import { ShowLogoutService } from './show-logout.service';
+import { SignUpCompleteComponent } from './sign-up/sign-up-complete/sign-up-complete.component';
+import { UserInfoService } from './user-info.service';
 
 
 
@@ -25,19 +29,21 @@ const appRoutes: Routes = [
   {path: 'mainmenu', component: MainMenuComponent},
   {path: 'levelEditor', component: DrawLevelComponent},
   {path: 'signUp', component: SignUpComponent},
-  { path: '',   redirectTo: '/mainmenu', pathMatch: 'full' }
+  {path: 'signUpComplete', component:SignUpCompleteComponent},
+  {path: '',   redirectTo: '/mainmenu', pathMatch: 'full' }
 ];
 
 @NgModule({
+  
     
 
   imports:    [ BrowserModule, BrowserAnimationsModule, FormsModule, RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     )
  ],
-  declarations: [ AppComponent, HelloComponent, LoginComponent, MainMenuComponent, DrawLevelComponent, CanvasComponent, DrawLevelMenuComponent, AboutComponent, MochiFaceComponent, LevelEditButtonComponent, AboutButtonComponent, SignUpComponent ],
+  declarations: [ AppComponent, HelloComponent, LoginComponent, MainMenuComponent, DrawLevelComponent, CanvasComponent, DrawLevelMenuComponent, AboutComponent, MochiFaceComponent, LevelEditButtonComponent, AboutButtonComponent, SignUpComponent, LogoutComponent, SignUpCompleteComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ShowLoginService]
+  providers: [ShowLoginService, ShowLogoutService, UserInfoService]
 })
 export class AppModule { }

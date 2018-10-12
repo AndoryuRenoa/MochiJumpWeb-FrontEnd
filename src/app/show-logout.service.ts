@@ -4,7 +4,7 @@ import {Subject } from "rxjs";
 @Injectable({
   providedIn: 'root',
 })
-export class ShowLoginService {
+export class ShowLogoutService {
 
   private show = new Subject<boolean>();
 
@@ -16,8 +16,8 @@ export class ShowLoginService {
     return this.show.asObservable();
   }
 
-  changeShowStatus( showAppLogin: boolean){
-    this.show.next(showAppLogin);
+  changeShowStatus( showAppLogout: boolean){
+    this.show.next(showAppLogout);
 
   }
 

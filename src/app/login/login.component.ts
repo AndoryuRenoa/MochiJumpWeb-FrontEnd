@@ -9,7 +9,7 @@ import {ShowLoginService} from '../show-login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public showAppLogin;
+
 
   constructor(private showLoginService: ShowLoginService) { }
 
@@ -19,7 +19,12 @@ export class LoginComponent implements OnInit {
 
   hideMe(){
     this.showLoginService.changeShowStatus(false);
-    console.log("hideMe fired");
+  }
+
+  attemptLogin(userName : String, password:String){
+    if(confirm("This isn't live and will currently only show you the username and password \nHit ok to confirm or cancel to stop"))
+    alert("Okay, inputed \nUser Name: "+ userName+
+    "\nPassword: "+ password)
   }
 
 }
