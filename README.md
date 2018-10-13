@@ -7,6 +7,8 @@ Okay, so first things first. Divide the different aspects of the page into succi
 
 *Dev server: https://angular-wi8huv.stackblitz.io*
 
+AngularCLI and stackblitz don't play well together. I had to basically rewrite the project to run properly from my own server
+
 was able to get sprite animation in angular, but I don't like the results. This is an interesting read:
 https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html#svg-graphics
 
