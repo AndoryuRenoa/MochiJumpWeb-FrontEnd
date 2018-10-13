@@ -1,16 +1,27 @@
-# MochiJumpWeb-FrontEnd
+# MjWebFrontEnd
 
-** Rebuilding the Front End of MochiJump in Angular**
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
-Okay, so first things first. Divide the different aspects of the page into succinct components. i.e. MenuComponent, LoginComponent, CanvasComponent, ToolsComponent etc. 
+## Development server
 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-*Dev server: https://angular-wi8huv.stackblitz.io*
+## Code scaffolding
 
-AngularCLI and stackblitz don't play well together. I had to basically rewrite the project to run properly from my own server
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-was able to get sprite animation in angular, but I don't like the results. This is an interesting read:
-https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html#svg-graphics
+## Build
 
-Services and Event Emmiters:
-https://stackoverflow.com/questions/35738355/angular-2-changing-component-variables-on-another-component
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

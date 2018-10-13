@@ -1,12 +1,12 @@
 <div class = thisBody>
-<a [routerLink] = "['/']">
-<h2> Click here to go back </h2>
-</a>
-<p>
-This will be the signup page. It is currently not connected to the backend hence will not work.
-</p>
-<p> for now this field and button will simulate signing up </p>
-Enter your name here:&nbsp;&nbsp;
-<input #name (keyup.enter)= "saveName(name.value)"> &nbsp;
-<button (click)="saveName(name.value)"> Sign me Up! </button>
-</div>
+  <a [routerLink] = "['/']">
+  <h2> Click here to go back </h2>
+  </a>
+  <p>
+  This will be the signup page. It is currently not connected to the backend hence will not work.
+  </p>
+  <p> for now this field and button will simulate signing up </p>
+  Enter your name here:&nbsp;&nbsp;
+  <input #name (keyup.enter)= "saveName(name.value)"> &nbsp;
+  <button (click)="saveName(name.value)"> Sign me Up! </button>
+  </div>

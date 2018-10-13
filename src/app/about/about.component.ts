@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-// wait do I want to use a materials popup for this, or routing to a new part of the app?
+
   constructor() { }
 
   ngOnInit() {

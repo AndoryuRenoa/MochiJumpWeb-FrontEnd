@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HelloComponent } from '../Hello.component';
 import {ShowLoginService} from '../show-login.service';
 
 

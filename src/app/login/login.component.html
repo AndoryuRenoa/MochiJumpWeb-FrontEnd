@@ -1,13 +1,13 @@
 
 <div class = 'loginBody'>
-<div class= 'loginForm'>
-  <a  (click) = hideMe(); [routerLink] = "['/signUp']">
-  <button class="signUpButton"> Sign Up </button>
-  </a>
-   User Name: <input #userName (keyup.enter)="attemptLogin(userName.value, password.value)">
-  Password: <input type = "password" #password (keyup.enter)="attemptLogin(userName.value, password.value)">
-&nbsp;&nbsp;&nbsp;
-<button class ="loginButton" (click)="attemptLogin(userName.value, password.value)">&nbsp;Login&nbsp;</button>
-</div>
-
-</div>
+  <div class= 'loginForm'>
+    <a  (click) = hideMe(); [routerLink] = "['/signUp']">
+    <button class="signUpButton"> Sign Up </button>
+    </a>
+     User Name: <input #userName (keyup.enter)="attemptLogin(userName.value, password.value)">
+    Password: <input type = "password" #password (keyup.enter)="attemptLogin(userName.value, password.value)">
+  &nbsp;&nbsp;&nbsp;
+  <button class ="loginButton" (click)="attemptLogin(userName.value, password.value)">&nbsp;Login&nbsp;</button>
+  </div>
+  
+  </div>

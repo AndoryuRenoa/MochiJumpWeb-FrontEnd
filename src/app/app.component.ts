@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import {ShowLoginService} from './show-login.service';
 import {ShowLogoutService} from './show-logout.service';
 
+
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent  {
-  name = 'Being Fed from AppComponent';
+export class AppComponent {
+  title = 'mj-web-front-end';
   showAppLogin : boolean;
   showAppLogout: boolean;
 

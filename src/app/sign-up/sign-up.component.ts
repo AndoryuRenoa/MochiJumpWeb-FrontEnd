@@ -21,7 +21,7 @@ export class SignUpComponent implements OnInit, OnDestroy{
    
   }
 
-  saveName(userName :String){
+  saveName(userName :string){
     this.userInfo.setUserName(userName);
     this.signUpCompleted();
   }
