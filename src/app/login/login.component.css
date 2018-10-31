@@ -1,19 +1,25 @@
 .loginBody{
-    position: relative;
-   margin:0px;
-   background-color :darkslategray;
-   overflow: hidden;
- }
- .loginForm{
-   margin:0px;
-   color:white;
-   text-align: right;
- }
+  position: relative;
+ background-color :darkslategray;
+ overflow: hidden;
  
- .loginButton{
-   padding: 5px;
- }
- .signUpButton{
-   padding: 5px;
- }
+}
+.loginWrapper{
+  margin-right: auto;
+  float: right;
+}
+
+.loginForm{
+ margin:0px;
+ color:white;
+ text-align: right;
+ display: inline-flex;
  
+}
+
+.loginButton{
+ padding: 5px;
+}
+.signUpButton{
+ padding: 5px;
+}

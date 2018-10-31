@@ -1,12 +1,36 @@
 <div class = thisBody>
   <a [routerLink] = "['/']">
-  <h2> Click here to go back </h2>
+  <h2> [Click here to go back to main menu] </h2>
   </a>
   <p>
-  This will be the signup page. It is currently not connected to the backend hence will not work.
-  </p>
-  <p> for now this field and button will simulate signing up </p>
-  Enter your name here:&nbsp;&nbsp;
-  <input #name (keyup.enter)= "saveName(name.value)"> &nbsp;
-  <button (click)="saveName(name.value)"> Sign me Up! </button>
-  </div>
+  This will be the signup page. Currently being tested
+  
+  <form #loginForm= "ngForm" (ngSubmit)="signup()" [formGroup]="registerForm">
+    Enter your first name here:&nbsp;&nbsp;<p></p>
+      <div *ngIf="submitted && f.userFirstName.errors?.required" class="redError">**Please Provide Your First Name**</div>
+        <input  type="text" formControlName="userFirstName" class="form-control">  
+          <p></p>
+    Enter your user name here:&nbsp;&nbsp;<p></p>
+      <div *ngIf="submitted && f.userName.errors?.required" class="redError">**Please Provide a User Name**</div>
+      <div *ngIf="submitted && nameTaken" class="redError">**This user name is already taken, please select a new one**</div>
+        <input type= "text" formControlName="userName" class="form-control">
+          <p></p>
+          <!-- stopped here-->
+    Enter your Email here:&nbsp;&nbsp;<p></p>
+      <div *ngIf="submitted && f.emailAddress.errors?.required" class="redError">**Please Provide Your Email Address**</div>
+      <div *ngIf="submitted && f.emailAddress.errors?.email" class="redError">**Email address must be valid**</div>
+        <input type="text" formControlName="emailAddress" class="form-control">
+          <p></p>
+    Enter your password here:&nbsp;&nbsp;<p></p>
+      <div *ngIf="submitted && f.password.errors?.required" class="redError">**Please Provide a Password**</div>
+      <div *ngIf="submitted && f.password.errors?.required" class="redError">**Password must be 5 or more characters**</div>
+        <input type="password" formControlName="password" class="form-control">
+          <p></p>
+    Re-Enter your password here:&nbsp;&nbsp;<p></p>
+      <div *ngIf="submitted && f.password2.errors" class="redError">**Passwords must match**</div>
+      <input type="password" formControlName="password2" class="form-control">
+      
+           &nbsp;
+            <button type="submit"> Sign me Up! </button>
+  </form>
+</div>

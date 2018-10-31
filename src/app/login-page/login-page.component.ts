@@ -1,24 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import {ShowLoginService} from '../show-login.service';
-import {ShowLogoutService} from '../show-logout.service';
 import {PerformLoginService} from '../perform-login.service';
 import {AuthenticateService} from'../authenticate.service';
 import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-login-page',
+  templateUrl: './login-page.component.html',
+  styleUrls: ['./login-page.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginPageComponent implements OnInit {
 
   credentials = {username: '', password: ''};
 
 
   constructor(private showLoginService: ShowLoginService,
      private peformLogin : PerformLoginService, private authenticate: AuthenticateService,
-     private router : Router, private showLogout: ShowLogoutService  ) { }
+     private router : Router ) { }
 
   ngOnInit() {
     
@@ -29,12 +28,8 @@ export class LoginComponent implements OnInit {
   }
 
   attemptLogin(username : string, password: string){
-    this.authenticate.authenticate(this.credentials, response=>{
-      console.log("Welcome "+ response+" from login component");
-      this.showLoginService.changeShowStatus(false);
-      this.showLogout.changeShowStatus(true);
+    this.authenticate.authenticate(this.credentials, ()=>{
       this.router.navigateByUrl('/');
-
         });
         return false;
   }

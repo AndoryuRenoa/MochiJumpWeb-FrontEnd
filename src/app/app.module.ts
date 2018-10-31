@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -15,6 +17,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { AboutButtonComponent } from './main-menu/about-button/about-button.component';
 import { LevelEditButtonComponent } from './main-menu/level-edit-button/level-edit-button.component';
 import { SignUpCompleteComponent } from './sign-up/sign-up-complete/sign-up-complete.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { ContactButtonComponent } from './main-menu/contact-button/contact-button.component';
 
 
 const appRoutes: Routes = [
@@ -23,6 +27,8 @@ const appRoutes: Routes = [
   {path: 'levelEditor', component: DrawLevelComponent},
   {path: 'signUp', component: SignUpComponent},
   {path: 'signUpComplete', component:SignUpCompleteComponent},
+  {path: 'login', component: LoginPageComponent},
+  {path: 'levelEditor', component: DrawLevelComponent},
   {path: '',   redirectTo: '/mainmenu', pathMatch: 'full' }
 ];
 
@@ -38,13 +44,17 @@ const appRoutes: Routes = [
     SignUpComponent,
     AboutButtonComponent,
     LevelEditButtonComponent,
-    SignUpCompleteComponent
+    SignUpCompleteComponent,
+    LoginPageComponent,
+    ContactButtonComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
-    FormsModule
+    ReactiveFormsModule,FormsModule,
+    HttpClientModule,
+    RxReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
