@@ -8,4 +8,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Notes
 
-https://stackoverflow.com/questions/43094830/angular-2-login-with-spring-security
+Currently live!
