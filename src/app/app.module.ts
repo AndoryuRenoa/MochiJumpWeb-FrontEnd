@@ -20,6 +20,7 @@ import { SignUpCompleteComponent } from './sign-up/sign-up-complete/sign-up-comp
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ContactButtonComponent } from './main-menu/contact-button/contact-button.component';
 import { ContactComponent } from './contact/contact.component';
+import { MessageSentComponent } from './contact/message-sent/message-sent.component';
 
 
 const appRoutes: Routes = [
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
   {path: 'login', component: LoginPageComponent},
   {path: 'levelEditor', component: DrawLevelComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'messageSent', component: MessageSentComponent},
   {path: '',   redirectTo: '/mainmenu', pathMatch: 'full' }
 ];
 
@@ -50,6 +52,7 @@ const appRoutes: Routes = [
     LoginPageComponent,
     ContactButtonComponent,
     ContactComponent,
+    MessageSentComponent,
   ],
   imports: [
     BrowserModule,

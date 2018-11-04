@@ -14,11 +14,12 @@ export class ContactComponent implements OnInit {
 
   private loggedIn : boolean = false;
   private submitted: boolean = false;
+  private unableToSendMessage: boolean = false;
 
   messageFormNotLoggedIn: FormGroup;
   messageFormLoggedIn: FormGroup;
 
-  messageInfo = {subject: '', email: '', messageBody: ''};
+  message= {subject: '', email: '', messageBody: ''};
 
   constructor(private messangerService : MessangerService, private formBuilder: FormBuilder,
     private auth: AuthenticateService) { }
@@ -33,9 +34,8 @@ export class ContactComponent implements OnInit {
       subject: ['', Validators.required],
       messageBody: ['', [Validators.required]]
     })
-    //this.loggedIn = this.auth.getLoggedInStatus();
-    this.loggedIn = false;
-    console.log(this.loggedIn)
+    this.loggedIn = this.auth.getLoggedInStatus();
+    this.messangerService.getUnableToSendMessage().subscribe(res => this.unableToSendMessage = res);
   }
 
   get fnli(){ return this.messageFormNotLoggedIn.controls}
@@ -44,6 +44,34 @@ export class ContactComponent implements OnInit {
 
   sendMessage(){
     this.submitted = true;
+    if (!this.loggedIn){
+      this.message = { 
+        subject: this.fnli.subject.value, 
+        email: this.fnli.emailAddress.value,
+        messageBody: this.fnli.messageBody.value
+      };
+      if(this.messageFormNotLoggedIn.invalid){
+        return;
+      }
+      
+      return this.messangerService.attemptSendMessage(this.message, ()=>{});
+
+    }
+    if (this.loggedIn){
+      this.message = { 
+        subject: this.fli.subject.value, 
+        email: this.auth.getEmailAddress(),
+        messageBody: this.fli.messageBody.value
+      };
+      if(this.messageFormLoggedIn.invalid){
+        return;
+      }
+
+      return this.messangerService.attemptSendMessage(this.message, ()=>{});
+
+    }
+
+    
 
   }
 
