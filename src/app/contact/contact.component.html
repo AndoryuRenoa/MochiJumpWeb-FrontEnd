@@ -1,0 +1,33 @@
+<div class = 'messageBody'>
+  <div *ngIf ="!loggedIn;"> <h2> You are currently not logged in. Please provide contact information</h2>
+    <form #messageForm= "ngForm" (ngSubmit)="sendMessage()" [formGroup]="messageFormNotLoggedIn">
+        Subject: <p></p>
+        <div *ngIf="submitted && fnli.subject.errors?.required" class="redError">**Please provide a subject for your message**</div>
+        <input  type="text" formControlName="subject" class="form-control">  
+        <p></p>
+        Email: <p></p>
+        <div *ngIf="submitted && fnli.emailAddress.errors?.required" class="redError">**Please provide your email address**</div>
+        <div *ngIf="submitted && fnli.emailAddress.errors?.email" class="redError">**Email address must be valid**</div>
+        <input  type="text" formControlName="emailAddress" class="form-control">  
+        <p></p>
+        Message: <p></p>
+        <div *ngIf="submitted && fnli.subject.errors?.required" class="redError">**Please provide your message**</div>
+        <textarea  type="text" formControlName="messageBody" class="form-control">  
+        <p></p>
+        <button type="submit"> Send Message </button>
+    </form>
+  </div>
+  <div *ngIf ="loggedIn;">
+      <form #messageForm= "ngForm" (ngSubmit)="sendMessage()" [formGroup]="messageFormLoggedIn">
+          Subject: <p></p>
+          <div *ngIf="submitted && fli.subject.errors?.required" class="redError">**Please provide a subject for your message**</div>
+          <input  type="text" formControlName="subject" class="form-control">  
+          <p></p>
+          Message: <p></p>
+          <div *ngIf="submitted && fli.subject.errors?.required" class="redError">**Please provide your message**</div>
+          <textarea type="text" formControlName="messageBody" class="form-control"></textarea>  
+          <p></p>
+          <button type="submit"> Send Message </button>
+      </form>
+  </div>
+  </div>

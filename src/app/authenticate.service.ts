@@ -41,4 +41,8 @@ export class AuthenticateService {
         return this.userFirstName
     }
 
+    getLoggedInStatus(){
+        return this.authenticated
+    }
+
 }
