@@ -1,16 +1,18 @@
 <div class = 'loginBody'>
 
-  <h2> You have been brought here as it is neccessary to login to access further content</h2>
+  <h2> You must login to access further content</h2>
   <form #loginForm= "ngForm" (ngSubmit)="attemptLogin(username.value, password.value)">
     
     User Name: <input #username (keyup.enter)="attemptLogin(username.value, password.value)" name="username"
-    [(ngModel)] ="credentials.username"><p></p>
+    [(ngModel)] ="credentials.username" type='text'><p></p>
     Password: <input  #password (keyup.enter)="attemptLogin(username.value, password.value)" name="password"
     [(ngModel)] ="credentials.password" type="password">
   &nbsp;&nbsp;&nbsp;
+  <p></p>
   <button type = "submit" class ="loginButton">&nbsp;Login&nbsp;</button>
   </form>
   <p></p>
+  <p>Alternatively click below to sign up for a free account</p>
   <a  (click) = hideMe(); [routerLink] = "['/signUp']">
     <button class="signUpButton"> Sign Up </button>
     </a>

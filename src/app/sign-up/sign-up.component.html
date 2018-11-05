@@ -1,10 +1,7 @@
+<a [routerLink] = "['/']">
+  <h5 style = 'text-align: center'> Return to Main Menu </h5> </a>
 <div class = thisBody>
-  <a [routerLink] = "['/']">
-  <h2> [Click here to go back to main menu] </h2>
-  </a>
-  <p>
-  This will be the signup page. Currently being tested
-  
+  <h2>Sign up For Your Free Account</h2>
   <form #loginForm= "ngForm" (ngSubmit)="signup()" [formGroup]="registerForm">
     Enter your first name here:&nbsp;&nbsp;<p></p>
       <div *ngIf="submitted && f.userFirstName.errors?.required" class="redError">**Please Provide Your First Name**</div>
