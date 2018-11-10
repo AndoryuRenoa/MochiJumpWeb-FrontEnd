@@ -21,6 +21,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { ContactButtonComponent } from './main-menu/contact-button/contact-button.component';
 import { ContactComponent } from './contact/contact.component';
 import { MessageSentComponent } from './contact/message-sent/message-sent.component';
+import { UserComponent } from './user/user.component';
 
 
 const appRoutes: Routes = [
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
   {path: 'levelEditor', component: DrawLevelComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'messageSent', component: MessageSentComponent},
-  {path: '',   redirectTo: '/mainmenu', pathMatch: 'full' }
+  {path: '',   redirectTo: '/mainmenu', pathMatch: 'full' },
+  {path: 'user', component: UserComponent}
 ];
 
 @NgModule({
@@ -53,6 +55,7 @@ const appRoutes: Routes = [
     ContactButtonComponent,
     ContactComponent,
     MessageSentComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
