@@ -22,6 +22,7 @@ import { ContactButtonComponent } from './main-menu/contact-button/contact-butto
 import { ContactComponent } from './contact/contact.component';
 import { MessageSentComponent } from './contact/message-sent/message-sent.component';
 import { UserComponent } from './user/user.component';
+import { LoginFailureComponent } from './login-failure/login-failure.component';
 
 
 const appRoutes: Routes = [
@@ -56,6 +57,7 @@ const appRoutes: Routes = [
     ContactComponent,
     MessageSentComponent,
     UserComponent,
+    LoginFailureComponent,
   ],
   imports: [
     BrowserModule,
