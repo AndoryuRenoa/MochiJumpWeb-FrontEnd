@@ -29,13 +29,13 @@ export class LoginComponent implements OnInit {
   }
 
   attemptLogin(username : string, password: string){
-    this.authenticate.authenticate(this.credentials, response=>{
+    this.authenticate.authenticate(this.credentials, 
+      response=>{
       console.log("Welcome "+ response+" from login component");
       this.showLoginService.changeShowStatus(false);
       this.showLogout.changeShowStatus(true);
       this.router.navigateByUrl('/');
-
-        });
+      });
         return false;
   }
 

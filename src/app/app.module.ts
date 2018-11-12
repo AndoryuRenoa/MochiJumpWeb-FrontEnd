@@ -36,7 +36,8 @@ const appRoutes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'messageSent', component: MessageSentComponent},
   {path: '',   redirectTo: '/mainmenu', pathMatch: 'full' },
-  {path: 'user', component: UserComponent}
+  {path: 'user', component: UserComponent},
+  {path: 'loginFailure', component: LoginFailureComponent}
 ];
 
 @NgModule({

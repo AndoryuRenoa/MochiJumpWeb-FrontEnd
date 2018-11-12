@@ -4,7 +4,13 @@ body {
     font-family: 'Open Sans Condensed', arial, sans;
     margin: 0;
 		background-color: lightgray;
-	}
+  }
+  
+  .menuOption:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  }
   
   .formStyle{
     font-family: 'Open Sans Condensed', arial, sans;

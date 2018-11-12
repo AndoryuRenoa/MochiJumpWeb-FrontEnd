@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {ShowLoginService} from './show-login.service';
 import {ShowLogoutService} from './show-logout.service';
 import { Config } from 'protractor';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,8 @@ export class AuthenticateService {
 
   authenticated = false;
 
-  constructor(private http: HttpClient, private showLoginService: ShowLoginService, private showLogout: ShowLogoutService ) {
-  }
+  constructor(private http: HttpClient, private showLoginService: ShowLoginService, 
+    private showLogout: ShowLogoutService, private router: Router ) {}
 
   authenticate(credentials, callback) {
 
@@ -39,8 +40,13 @@ export class AuthenticateService {
             } else {
                 this.authenticated = false;
             }
-            return callback && callback();
-        });
+            return callback && callback()
+        },
+            error => {
+                console.log(error);
+                this.router.navigateByUrl('/loginFailure');
+            }
+        );
 
     }
 
