@@ -1,7 +1,14 @@
 <div class = 'formStyle'>
   <h2> User Info</h2>
-  <p> Below please find a list of levels created by you:</p>
-  <div *ngIf = 'levelsExist;'> <!-- This isn't implememnted yet--></div>
-  <div *ngIf ='!levelsExist;'><li>You haven't made any levels!</li></div>
+  <a [routerLink] = "['/userLevels']">
+    <p>Level Management</p>
+  </a>
+  <p></p>
+  <a [routerLink] = "['/userPassword']">
+    <p>Password Management</p>
+  </a>
+  <a [routerLink] = "['/userEmail']">
+    <p>Email Management</p>
+  </a>
 
 </div>

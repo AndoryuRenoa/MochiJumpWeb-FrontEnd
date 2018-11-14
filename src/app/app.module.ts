@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
@@ -23,6 +23,9 @@ import { ContactComponent } from './contact/contact.component';
 import { MessageSentComponent } from './contact/message-sent/message-sent.component';
 import { UserComponent } from './user/user.component';
 import { LoginFailureComponent } from './login-failure/login-failure.component';
+import { UserPasswordComponent } from './user/user-password/user-password.component';
+import { UserEmailComponent } from './user/user-email/user-email.component';
+import { UserLevelsComponent } from './user/user-levels/user-levels.component';
 
 
 const appRoutes: Routes = [
@@ -36,8 +39,11 @@ const appRoutes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'messageSent', component: MessageSentComponent},
   {path: '',   redirectTo: '/mainmenu', pathMatch: 'full' },
-  {path: 'user', component: UserComponent},
-  {path: 'loginFailure', component: LoginFailureComponent}
+  {path: 'userinfo', component: UserComponent},
+  {path: 'loginFailure', component: LoginFailureComponent},
+  {path: 'userPassword', component: UserPasswordComponent},
+  {path: 'userEmail', component: UserEmailComponent },
+  {path: 'userLevels', component: UserLevelsComponent}
 ];
 
 @NgModule({
@@ -59,6 +65,9 @@ const appRoutes: Routes = [
     MessageSentComponent,
     UserComponent,
     LoginFailureComponent,
+    UserPasswordComponent,
+    UserEmailComponent,
+    UserLevelsComponent,
   ],
   imports: [
     BrowserModule,
