@@ -14,7 +14,7 @@ body {
   
   .formStyle{
     font-family: 'Open Sans Condensed', arial, sans;
-    width: 500px;
+    max-width: 500px;
     padding: 30px;
     background: #FFFFFF;
     margin: 50px auto;
@@ -56,3 +56,11 @@ body {
     resize:none;
     overflow: hidden;
   }
+
+  @media screen and (max-width: 600px) {
+    .mobileScale{
+        transform: scale(.8);
+        -webkit-transform: scale(.8);
+        -moz-transform: scale(.8);
+    }
+}

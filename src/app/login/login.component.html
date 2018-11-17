@@ -7,12 +7,11 @@
         </a>
     <form #loginForm= "ngForm" (ngSubmit)="attemptLogin(username.value, password.value)">
     User Name: <input #username (keyup.enter)="attemptLogin(username.value, password.value)" name="username"
-    [(ngModel)] ="credentials.username">
+    [(ngModel)] ="credentials.username" type ="text">
     Password: <input  #password (keyup.enter)="attemptLogin(username.value, password.value)" name="password"
     [(ngModel)] ="credentials.password" type="password">
-  &nbsp;&nbsp;&nbsp;
-  <button type = "submit" class ="loginButton" >&nbsp;Login&nbsp;</button>
+      <button type = "submit" class ="loginButton" >&nbsp;Login&nbsp;</button>
     </form>
-    </div>
+  </div>
   </div>
   </div>

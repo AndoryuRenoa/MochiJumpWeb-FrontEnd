@@ -7,6 +7,7 @@
 .loginWrapper{
   margin-right: auto;
   float: right;
+  max-width: 100%;
 }
 
 .loginForm{
@@ -15,6 +16,29 @@
  text-align: right;
  display: inline-flex;
  
+}
+
+@media screen and (max-width: 600px) {
+  .loginWrapper {
+    margin: auto;
+  }
+  .loginForm{
+    font-size:x-small;
+    margin: 0px;
+  }
+  input[type=text], input[type="password"]{
+    white-space: nowrap;
+    overflow: hidden;
+    width: 12%;
+  }
+  .signUpButton{
+    white-space: nowrap;
+    font-size: x-small;
+  }
+  .loginButton{
+    font-size: x-small;
+  }
+
 }
 
 .loginButton{
