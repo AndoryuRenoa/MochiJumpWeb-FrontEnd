@@ -26,6 +26,7 @@ import { LoginFailureComponent } from './login-failure/login-failure.component';
 import { UserPasswordComponent } from './user/user-password/user-password.component';
 import { UserEmailComponent } from './user/user-email/user-email.component';
 import { UserLevelsComponent } from './user/user-levels/user-levels.component';
+import { GameDownloadComponent } from './game-download/game-download.component';
 
 
 const appRoutes: Routes = [
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
   {path: 'loginFailure', component: LoginFailureComponent},
   {path: 'userPassword', component: UserPasswordComponent},
   {path: 'userEmail', component: UserEmailComponent },
-  {path: 'userLevels', component: UserLevelsComponent}
+  {path: 'userLevels', component: UserLevelsComponent},
+  {path: 'download', component: GameDownloadComponent}
 ];
 
 @NgModule({
@@ -68,6 +70,7 @@ const appRoutes: Routes = [
     UserPasswordComponent,
     UserEmailComponent,
     UserLevelsComponent,
+    GameDownloadComponent,
   ],
   imports: [
     BrowserModule,
