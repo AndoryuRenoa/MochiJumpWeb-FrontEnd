@@ -9,3 +9,5 @@ Currently live! -- https://mochijump.com
 ## To Do
 
 create and implement logout service
+
+fix "securily" typo in about
