@@ -1,9 +1,13 @@
 /* Add application styles & imports to this file! */
 
+html { 
+  background:  url(/images/background.gif) no-repeat center center fixed; 
+  background-size: cover;
+}
+
 body {
     font-family: 'Open Sans Condensed', arial, sans;
     margin: 0;
-		background-color: lightgray;
   }
   
   .menuOption:hover{
@@ -63,4 +67,25 @@ body {
         -webkit-transform: scale(.8);
         -moz-transform: scale(.8);
     }
-}
+  }
+    .aboutStyle{
+      font-family: 'Open Sans Condensed', arial, sans;
+      max-width: 500px;
+      padding: 30px;
+      background: #FFFFFF;
+      margin: 5px auto;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+      -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+      -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+    
+    }
+    .aboutStyle h2{
+      background: #4D4D4D;
+      text-transform: uppercase;
+      font-family: 'Open Sans Condensed', sans-serif;
+      color: #797979;
+      font-size: 18px;
+      font-weight: 100;
+      padding: 20px;
+      margin: -30px -30px 30px -30px;
+    }

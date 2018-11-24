@@ -1,5 +1,4 @@
-<a [routerLink] = "['/']">
-  <h5 style = 'text-align: center'> Return to Main Menu </h5> </a>
+
 <div class = 'formStyle'>
   <h2>Sign up For Your Free Account</h2>
   <form #loginForm= "ngForm" (ngSubmit)="signup()" [formGroup]="registerForm">
@@ -30,4 +29,8 @@
            &nbsp;
             <button type="submit"> Sign me Up! </button>
   </form>
+  <p></p>
+    <a [routerLink]="['/']">
+      <button> Go Back to Main Menu </button>
+    </a>
 </div>

@@ -27,6 +27,7 @@ import { UserPasswordComponent } from './user/user-password/user-password.compon
 import { UserEmailComponent } from './user/user-email/user-email.component';
 import { UserLevelsComponent } from './user/user-levels/user-levels.component';
 import { GameDownloadComponent } from './game-download/game-download.component';
+import { GameButtonComponent } from './main-menu/game-button/game-button.component';
 
 
 const appRoutes: Routes = [
@@ -71,6 +72,7 @@ const appRoutes: Routes = [
     UserEmailComponent,
     UserLevelsComponent,
     GameDownloadComponent,
+    GameButtonComponent,
   ],
   imports: [
     BrowserModule,

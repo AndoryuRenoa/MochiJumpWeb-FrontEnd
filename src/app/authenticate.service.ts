@@ -50,6 +50,38 @@ export class AuthenticateService {
 
     }
 
+    authenticateOnLoad(credentials, callback) {
+
+        const headers = new HttpHeaders(credentials ? {
+            authorization : 'Basic ' + btoa(credentials.username + ':' + credentials.password), 
+        } : {});
+
+        
+
+        this.http.get('/test/user', {headers: headers}).subscribe((data: Config) => {
+            this.userInfo = {
+                userFirstName: data['userFirstName'], 
+                userName: data['userName'], 
+                emailAddress: data['emailAddress'], 
+                password: data['password']
+            } 
+            this.showLoginService.changeShowStatus(false);
+            this.showLogout.changeShowStatus(true);
+                console.log(data);
+            if (data['emailAddress'].length>3) {
+                this.authenticated = true;    
+            } else {
+                this.authenticated = false;
+            }
+            return callback && callback()
+        },
+            error => {
+                console.log("user is not logged in");
+            }
+        );
+
+    }
+
     getUserName(){
         return this.userInfo.userFirstName
     }

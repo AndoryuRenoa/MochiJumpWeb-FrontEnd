@@ -17,7 +17,7 @@ export class PerformLoginService {
 
   constructor(private http : HttpClient) { }
 
-
+   //DEFUNCT CLASS SHOULD DELETE REPLACED BY AUTHENTICATE.SERVICE.TS
 
   postLogin(username : string, password : string){
    let headers = new HttpHeaders ({

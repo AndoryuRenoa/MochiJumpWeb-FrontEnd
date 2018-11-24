@@ -12,4 +12,10 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+  scrollTo(idName: string):void {
+    let element = document.getElementById(idName);
+    
+    element.scrollIntoView({ behavior: 'smooth'});
+ }
+
 }

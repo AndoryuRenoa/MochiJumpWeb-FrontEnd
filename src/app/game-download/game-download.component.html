@@ -1,3 +1,33 @@
-<p>
-  game-download works!
-</p>
+<div class = 'formStyle'>
+  <h2> Download link and description for MochiJump Desktop Game</h2>
+  
+  <div class = "mobileWarning">
+    <p>*It looks like you're viewing this on a mobile device.
+      This is not a mobile app, please download on desktop to be able to run</p>
+  </div>
+  <div *ngIf = "!loggedIn;" style ="color: red">
+    <p>You must be logged in to download</p>
+  </div> 
+  <p>There are two options available for download: </p>
+  <p> Runnable .jar : This will run on any desktop machine with 
+    <a href= "https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html" target="_blank">
+      Java 1.8 or higher </a> installed on it. 
+  </p>
+  <p> Windows .exe : While still a java app. This is wrapped in a container for windows which will check if you
+    have an acceptable version of java installed on your machine. This will only run on windows.
+  </p>
+  <div *ngIf="loggedIn;">
+    <a href ="{{jarURL}}">
+      <div class="styleButton"> Runnable .jar</div>
+    </a>
+    <a href = "{{exeURL}}">
+      <div class="styleButton"> Windows .exe</div>
+    </a>
+  </div>
+  <p></p>
+  <a [routerLink]="['/']">
+    <button> Go Back to Main Menu </button>
+  </a>
+</div>
+  
+  
