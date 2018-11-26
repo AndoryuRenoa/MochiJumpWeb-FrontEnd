@@ -1,11 +1,11 @@
-<body>
+<body [ngStyle] = style>
   <div *ngIf ="showAppLogin;"><app-login></app-login></div>
   <div *ngIf ="showAppLogout;"><app-logout></app-logout> </div>
   <div class = 'tempMessage'>
-</div>
+  </div>
   <div style = "width: 100%">
     <router-outlet></router-outlet>
     <nav></nav>
   </div>
-
+  <div style = "text-align: right; cursor: pointer; color:black;"  (click)= "changeHDStatus()"> <p>{{hdStatus}}</p></div>
 </body>

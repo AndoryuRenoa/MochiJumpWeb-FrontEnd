@@ -1,2 +1,9 @@
-
-<img src="images/background.png">
+<img *ngIf="!hd;" src="images/background.png">
+<div *ngIf="hd;">
+    <p></p>
+<img  src= "images/bostonfacecrop.jpg" class="mochiFace" style= "max-width: 17.5%; height: auto;
+border-radius: 50%; 
+box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);">
+</div>
