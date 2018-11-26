@@ -16,13 +16,7 @@ export class AppComponent {
   hd: boolean;
   hdStatus: String = "Change to HD";
   bgSource = "images/background.gif";
-  cover = "cover";
-  height ='100vh';
-  zero='0';
-  terms = ' no-repeat center center fixed';
-  style = "{'background': 'url('images/background.gif') no-repeat center center fixed','background-size': 'cover', 'min-height': '100vh', 'margin': '0' }";
-
-
+ 
   constructor(private showLoginService: ShowLoginService, private showLogout: ShowLogoutService,
     private hdget: SwitchToHdService){
 
@@ -42,19 +36,11 @@ export class AppComponent {
     if (!this.hd){
       this.hdStatus = "Change to 8-bit Style";
       this.hdget.changeHDStatus(true);
-      this.bgSource="images/skyhd.jpeg ) no-repeat center center fixed";
-      this.cover = "cover";
-      this.height ='100vh';
-      this.zero='0';
-      this.style="{'background': 'url('images/skyhd.jpeg') no-repeat center center fixed','background-size': 'cover', 'min-height': '100vh', 'margin': '0' }";
+      this.bgSource="images/skyhd.jpeg";
     }else {
       this.hdStatus = "Change to HD";
       this.hdget.changeHDStatus(false);
-      this.bgSource = "images/background.gif ) no-repeat center center fixed";
-      this.cover = "cover";
-      this.height ='100vh';
-      this.zero='0';
-      this.style="{'background': 'url('images/background.gif') no-repeat center center fixed','background-size': 'cover', 'min-height': '100vh', 'margin': '0' }";
+      this.bgSource = "images/background.gif";
     }
   }
 

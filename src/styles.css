@@ -68,7 +68,7 @@ body {
         -moz-transform: scale(.8);
     }
     .mochiFace{
-      min-width: 35%; 
+      min-width: 50%; 
       height: auto;
     }
   }

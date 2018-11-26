@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { ReactiveFormsModule, FormsModule} from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
@@ -48,7 +47,7 @@ const appRoutes: Routes = [
   {path: 'userLevels', component: UserLevelsComponent},
   {path: 'download', component: GameDownloadComponent}
 ];
-
+  
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +76,6 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule,
     ReactiveFormsModule,FormsModule,
     HttpClientModule,
     RxReactiveFormsModule

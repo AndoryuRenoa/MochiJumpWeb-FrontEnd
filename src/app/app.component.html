@@ -1,4 +1,4 @@
-<body [ngStyle] = style>
+<body [ngStyle] = "{'background': 'url('+ bgSource +') no-repeat center center / cover fixed', 'background-size': 'cover' }">
   <div *ngIf ="showAppLogin;"><app-login></app-login></div>
   <div *ngIf ="showAppLogout;"><app-logout></app-logout> </div>
   <div class = 'tempMessage'>

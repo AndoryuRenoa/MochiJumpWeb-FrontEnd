@@ -1,25 +1,11 @@
-<div *ngIf="!hd;">
   <div class ="container1" >
     <div class="selector1" id="selector1">
       <div class= "selectorimg1" id="selectorimg1" > </div>
     </div>
     <div class="option1" id="option1">
       <a [routerLink]="['/contact']">
-      <img  src = "/images/contact.png" style="float: right;">
-      </a>
-    </div>
-    <div class = "right1"> 
-    </div>
-  </div>
-</div>
-<div *ngIf="hd;">
-    <div class ="container1" >
-      <div class="selector1" id="selector1">
-        <div class= "selectorimg1" id="selectorimg1" > </div>
-      </div>
-      <div class="option1" id="option1">
-        <a [routerLink]="['/contact']">
-          <div style="float: right;
+      <img *ngIf="!hd;" src = "/images/contact.png" style="float: right;">
+      <div *ngIf="hd;" style="float: right;
           background-color: rgb(49, 54, 49);
           border: none;
           color: white;
@@ -29,10 +15,10 @@
           display: inline-block;
           font-size: 40x;
           margin: 4px 2px;
-          cursor: pointer;">Contact</div>
-        </a>
-      </div>
-      <div class = "right1"> 
-      </div>
+          cursor: pointer;">Contact
+          </div>
+      </a>
+    </div>
+    <div class = "right1"> 
     </div>
   </div>
