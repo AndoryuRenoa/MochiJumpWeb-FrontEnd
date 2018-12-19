@@ -27,6 +27,13 @@ import { UserEmailComponent } from './user/user-email/user-email.component';
 import { UserLevelsComponent } from './user/user-levels/user-levels.component';
 import { GameDownloadComponent } from './game-download/game-download.component';
 import { GameButtonComponent } from './main-menu/game-button/game-button.component';
+import { GameMenuComponent } from './game-menu/game-menu.component';
+import { DownloadComponent } from './game-menu/download/download.component';
+import { MainMenuButtonComponent } from './game-menu/main-menu-button/main-menu-button.component';
+import { DeveloperComponent } from './developer/developer.component';
+import { DeveloperButtonComponent } from './main-menu/developer-button/developer-button.component';
+import { DeveloperGeneralMarketComponent } from './developer/developer-general-market/developer-general-market.component';
+import { DeveloperTechnicalComponent } from './developer/developer-technical/developer-technical.component';
 
 
 const appRoutes: Routes = [
@@ -45,7 +52,12 @@ const appRoutes: Routes = [
   {path: 'userPassword', component: UserPasswordComponent},
   {path: 'userEmail', component: UserEmailComponent },
   {path: 'userLevels', component: UserLevelsComponent},
-  {path: 'download', component: GameDownloadComponent}
+  {path: 'download', component: GameDownloadComponent},
+  {path: 'gameMenu', component: GameMenuComponent},
+  {path: 'developer', component: DeveloperComponent},
+  {path: 'generalMarket', component: DeveloperGeneralMarketComponent },
+  {path: 'technical', component: DeveloperTechnicalComponent}
+
 ];
   
 @NgModule({
@@ -72,6 +84,13 @@ const appRoutes: Routes = [
     UserLevelsComponent,
     GameDownloadComponent,
     GameButtonComponent,
+    GameMenuComponent,
+    DownloadComponent,
+    MainMenuButtonComponent,
+    DeveloperComponent,
+    DeveloperButtonComponent,
+    DeveloperGeneralMarketComponent,
+    DeveloperTechnicalComponent,
   ],
   imports: [
     BrowserModule,

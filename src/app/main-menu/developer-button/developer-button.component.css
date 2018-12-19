@@ -1,0 +1,19 @@
+.container1{	
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 5px;
+}
+	.option1{
+
+}
+	.selectorimg1{
+	float: right;
+
+}
+	.selector1, .right1{
+	  flex: 1;
+}

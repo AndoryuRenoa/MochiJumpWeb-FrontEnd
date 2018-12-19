@@ -1,7 +1,3 @@
-<a [routerLink] = "['/']">
-    <h5 style = 'text-align: center'> Return to Main Menu </h5> 
-</a>
-
 <div class = 'formStyle'>
  <div *ngIf ="unableToSendMessage;"><h1>An unexpected error has occured</h1></div>
   <div *ngIf ="!loggedIn;"> 
@@ -38,4 +34,8 @@
           <button type="submit"> Send Message </button>
       </form>
   </div>
+  <p></p>
+  <a [routerLink]="['/']">
+    <button> Go Back to Main Menu </button>
+  </a>
   </div>

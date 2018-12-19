@@ -1,0 +1,146 @@
+<div class="aboutStyle" id="intro">
+  <h2> Introduction</h2>
+  <p></p>
+  <p> I create apps on demand to fill a need.</p>
+  <p></p>
+  <p> Here's a list of some common topics</p> 
+  <p id = 'toc'>Please skip to what you'd find interesting, go back to the main menu and play around,
+    or <a [routerLink]="['/contact']">contact me</a> if you're interested in having me make something:</p>
+    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('why');">
+        <p>Why should I hire you developer?</p>
+    </a>
+    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('webapps');">
+      <p>What can a web app do?</p>
+    </a>
+
+    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('otherapps');">
+        <p>What about other apps?</p>
+      </a>
+
+    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('devvsdes');">
+        <p>Development vs Design</p>
+    </a>
+
+    
+    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('history');">
+        <p>Why I became a developer</p>
+    </a>
+
+    <a [routerLink]="['/']">
+      <button> Go Back to Main Menu </button>
+    </a>
+</div>
+<div class="aboutStyle" id='why'>
+    <h2> Why Should I Hire You as a Developer?</h2>
+    <p>Now there are thousands of pre-made solutions available. You're probably using at least one right now.
+      You probably already have a good idea regarding how one-size-fits-all doesn't really work for small business.
+      The ability to customize a software solution could either allow you to do something you've always wanted to
+      do, or eliminate a headache you are dealing with regularly. I understand this. Writing code allows for truly
+      custom software, and anything that makes that easier comes with the price of reducing the ability to customize.
+    </p>
+    <p>Just to give you an idea of some common pain points that could be eliminated. People often:
+      <li>have two things that currently can't talk to each other but should</li>
+      <li>spend too much time doing data entry manually</li>
+      <li>spend too much time organizing information correctly for reports</li>
+      <li>are missing information they feel is critical to their business</li>
+      <li>are missing a way for customers to tell them something important</li>
+      <li>feel like something is possible, but don't know how to make it happen</li>
+    </p>
+    <p>Having a custom software solution made doesn't have to be intimidating, but only if you work with the right
+      people.
+    </p>
+    <p>I'm affordable, I'm fast, I listen, and communicate well. If you ask me to do something I begin to protype it 
+      and show you the direction the project is going to ensure it matches your vision. In instances of single 
+      small projects I can complete them in a day, and larger projects can always be broken down into smaller projects. 
+      I want to help.
+    </p>
+  
+  <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
+  <br>
+  <a [routerLink]="['/']" >
+    <button> Go Back to Main Menu </button>
+  </a>
+  </div>
+<div class="aboutStyle" id='webapps'>
+  <h2> What can a web app do?</h2>
+  <p>Realistically, a web apps can do just about anything. They can live on the internet or live on a local network</p>
+  <p>If you have a business with mutliple employees and you want them working on the same system in real time, a 
+    web app is an excellent solution. Good examples of areas this is useful are:
+      <li>Sales</li>
+      <li>Customer Service</li>
+      <li>Customer Retention</li>
+      <li>Operations</li>
+      <li>Inventory Managment</li>
+      <br>
+    just to name a few.
+  </p>
+
+
+  <p>You can have a solution for a specific store or warehouse by keeping the app on a local network, or it can be global
+    by making it live on the internet.
+  </p>
+  <p>If you're a one person business and you want to be able to access your business from any computer
+      with an internet connection, then a web app is that solution.</p>
+  <p>Web apps can be designed for customer's to interact with, or for employees and owners to interact with. The only 
+    limit is imagination.
+  </p>
+  <p>Getting a new live web app does not have to replace your current website or require a new domain. The best example I can
+    think of this is gmail living at "mail.google.com." If you'd like a new web app accessable anywhere it can easily be
+    added to a sub-domain.
+  </p>
+
+<button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
+<br>
+<a [routerLink]="['/']" >
+  <button> Go Back to Main Menu </button>
+</a>
+</div>
+<div class="aboutStyle" id='otherapps'>
+    <h2> What about other apps?</h2>
+    <p>If you'd like your app to be a native desktop or mobile app, no problem. Just let me know.
+    </p>
+  
+  <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
+  <br>
+  <a [routerLink]="['/']" >
+    <button> Go Back to Main Menu </button>
+  </a>
+  </div>
+<div class="aboutStyle" id='devvsdes'>
+    <h2> Development vs Design </h2>
+    <p>A developer spends their time working on functionality. A designer spends their time on making things look nice.
+    </p>
+    <p>This can be a tricky distinction because there is overlap. The different has more to do with the focus</p>
+    <p>As a developer my top priority is designing something to (listed in order of importance):
+      <li>Perform a specific task (or tasks)</li>
+      <li>Be reliable</li>
+      <li>Be easy and fun to use</li>
+      I take pride in that last part, making things easy and fun to use. I take pride in my work, and the user's 
+      experience is the rubric that I use to ensure I've developed something that is quality
+    </p>
+  
+  <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
+  <br>
+  <a [routerLink]="['/']">
+    <button> Go Back to Main Menu </button>
+  </a>
+  </div>
+
+  <div class="aboutStyle" id='history'>
+      <h2> Why I became a developer</h2>
+      <p>I began studying software and software development after realizing that everything should be better
+        then it currently is. </p>
+      <p> I noticed this trend of how tools used by businesses claiming to solve problems actually
+        only created new problems for these business. I realized I could do better, and that is what I'm setting out 
+        to do. I feel like most people can imagine away to make their lives easier with software,
+        but most developers are focused on making products that can be marketed to the masses, and not to the individual. 
+        I feel that has created a very real market for people that need a solution just for them and their circumstances. 
+      </p>
+      <p>I'm setting out fill that role, one business, one person at a time.</p>  
+    
+    <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
+    <br>
+    <a [routerLink]="['/']">
+      <button> Go Back to Main Menu </button>
+    </a>
+    </div>

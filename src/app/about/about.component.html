@@ -1,161 +1,100 @@
 <div class="aboutStyle" id="intro">
-  <h2> Introduction / Table of Contents</h2>
-  <p></p>
-  <p> My name is Andrew Lenoir and welcome to my portfolio project: Mochi Jump</p>
-  <p> This project was designed to demonstrate what I can do. All aspects of this project were created 
-    by me including art (exception being the background on "HD Version")
-  </p>
-  <p></p>
-  <p> Below is a table of contents breaking down different aspects of the project in both non-techincal 
-    and techincal terms.</p> 
-  <p id = 'toc'>Please skip to what you'd find interesting or go back to the main menu and play around:</p>
-    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('webappnt');">
-      <p>The Web App (Non-Technical)</p>
-    </a>
-    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('servernt');">
-        <p>The Server (Non-Technical)</p>
-      </a>
-    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('securitynt');">
-        <p>Security (Non-Technical)</p>
-    </a>
-    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('gament');">
-        <p>The Game (Non-Technical)</p>
-    </a>
-    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('editornt');">
-        <p>The Level Editor (Non-Technical)</p>
-    </a>
-    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('stylent');">
-      <p>Style (Non-Technical)</p>
-  </a>
-    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('webappt');">
-        <p>Web Front End (Technical)</p>
-    </a>
-    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('servert');">
-        <p>Server Back End (Technical)</p>
-    </a>
-    <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('gamet');">
-        <p>Java Desktop App (Technical)</p>
-    </a>
-
-    <a [routerLink]="['/']">
-      <button> Go Back </button>
-    </a>
-</div>
-<div class="aboutStyle" id='webappnt'>
-  <h2> The Web App (Non-Technical) </h2>
-  <p>This web app is over-enginered to show case the capabilities of a modern web app</p>
-  <p></p>
-  <p>The first thing you may notice is that this app has a loading screen. It is possible to hide this and have
-    this type of app look like it's loading like a normal webpage, but it's doing some very cool things when someone
-    visits it for the first time.
-  </p>
-  <p> This is an example of a Single Page App (SPA). Despite the page having different URLs, it is all actually layers
-    on top of layers of the same page. This means that after the initial loading is complete the app will not have to
-    load anything else until you leave the web app or unless it has to ask the server for information not initially
-    loaded in the app package (think 
-      <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('securitynt');">
-        security</a>
-    or communicating with another server or saving something). The other nice thing about a design like that is everything
-    is modular, so if you want to change one thing that should always be visible you only have to change it in one instance
-  </p>
-
-  <p> The old prototype for the level editor is an example of a page built outside of the SPA</p>
-
-<button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
-<br>
-<a [routerLink]="['/']" >
-  <button> Go Back to Main Menu </button>
-</a>
-</div>
-<div class="aboutStyle" id='servernt'>
-    <h2> The Server (Non-Technical) </h2>
-    <p> The server is what allows the website to actually do things. A well designed server is critical for a 
-      well functioning web experience as well as for any app that wants to talk to anything more than just itself
+    <h2> Introduction / Table of Contents</h2>
+    <p></p>
+    <p> My name is Andrew Lenoir and welcome to my portfolio project:<br> Mochi Jump</p>
+    <p> This project was designed to demonstrate what I can do. All aspects of this project were created 
+      by me including art (exception being the background on "HD Version")
     </p>
-    <p> The server has many roles. One of the most common roles is that it can store, save, load, and deliver information.
-      It can also perform business logic, which depending on your business could be anything from sending out automated 
-      emails to compiling any kind of concievable report on demand.
-
-      Creating rules for accessing content is a critical aspect of 
-      <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('securitynt');">
-          security</a>
-    that is controlled by the server.
-    </p>
-
-    <p>I love writing back end code. For the end user it's something that they never see, but always feel. If a web
-      page does anything, it is because the server had code written to allow that functionality. In the case of this
-      website the server has specially written code that allows it to:
-      <li>Have specific user access</li>
-      <li>Have security</li>
-      <li>Save, load, and deliver levels for the Mochi Jump game</li>
-      <li>Send out emails when required</li>
-      <li>And deliver the Web-App in a single package the way it does.</li> 
-    </p>
-    <p>There are many different options for writing server code. I, personally, use Java, cloud computing, and microservices.
-      This gives me the ability to write apps that can scale with demand, and to seperate different functions into different
-      environments to keep things manageable and to allow for rapid development if neccessary. 
-    </p>
-  
-  <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
-  <br>
-  <a [routerLink]="['/']">
-    <button> Go Back to Main Menu </button>
-  </a>
-  </div>
-<div class="aboutStyle" id='securitynt'>
-    <h2> Security (Non-Technical) </h2>
-    <p> There are four major aspects to security:
-     <li> Having the user connect to the webpage securely </li>
-     <li> Having restrictions on what the user can access </li>
-     <li> Control what is sent and when</li>
-     <li> Protecting yourself from potential vulnerabilities </li>
-    </p> 
-    <p>The first aspect of having the user connect to your site securely is extremely critical. This is the "s"
-    in "https://" and the lock next to the URL in your browser when your on a secure webpage. If those components
-    are missing then anyone can view all the infromation you are sending to the server as well as all the information
-    the server is sending you. So, if you access a webpage that is not encrypted and you give it a username and password,
-    guess what, you just freely shouted out loud that username and password for anyone who cared to listen
-    </p>
-    <p> The second aspect is what people normally think of when they think security. The server has to set the rules
-      with regard to who can access what. It's a  critical component to having security if you need it.
-    </p>
-    <p> The third aspect is where people can get themselves into trouble if they don't think about what they are doing.
-      Under the 
+    <p></p>
+    <p> Below is a table of contents breaking down different aspects of the project in both non-techincal 
+      and techincal terms.</p> 
+    <p id = 'toc'>Please skip to what you'd find interesting, go back to the main menu and play around,
+      or <a [routerLink]="['/contact']">contact me</a> if you're interested in having me make something:</p>
       <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('webappnt');">
-          web app</a>
-      section, we talked about a cool feature of modern design where you can send a package that contains the entire
-      website (all pages included) when a user first visits the page. The downside to that is nothing in that package 
-      is secured. All the data and information is given freely. You can design an app that hides this from a browser,
-      but it is still in that package and can be easily found by anyone who knows what they are doing. This is why
-      it is critical that security is kept in mind in all aspects of development.
+        <p>The Web App (Non-Technical)</p>
+      </a>
+      <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('servernt');">
+          <p>The Server (Non-Technical)</p>
+        </a>
+      <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('securitynt');">
+          <p>Security (Non-Technical)</p>
+      </a>
+      <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('gament');">
+          <p>The Game (Non-Technical)</p>
+      </a>
+      <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('editornt');">
+          <p>The Level Editor (Non-Technical)</p>
+      </a>
+      <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('stylent');">
+        <p>Style (Non-Technical)</p>
+    </a>
+      <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('webappt');">
+          <p>Web Front End (Technical)</p>
+      </a>
+      <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('servert');">
+          <p>Server Back End (Technical)</p>
+      </a>
+      <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('gamet');">
+          <p>Java Desktop App (Technical)</p>
+      </a>
+  
+      <a [routerLink]="['/']">
+        <button> Go Back to Main Menu</button>
+      </a>
+  </div>
+  <div class="aboutStyle" id='webappnt'>
+    <h2> The Web App (Non-Technical) </h2>
+    <p>This web app is over-enginered to show case the capabilities of a modern web app</p>
+    <p></p>
+    <p>The first thing you may notice is that this app has a loading screen. It is possible to hide this and have
+      this type of app look like it's loading like a normal webpage, but it's doing some very cool things when someone
+      visits it for the first time.
     </p>
-    <p> The last aspect is keeping your stuff safe from hackers. To put it simply, if you take certain shortcuts when designing a 
-      server you could open up the potential for someone to inject code where it doesn't belong. 
+    <p> This is an example of a Single Page App (SPA). Despite the page having different URLs, it is all actually layers
+      on top of layers of the same page. This means that after the initial loading is complete the app will not have to
+      load anything else until you leave the web app or unless it has to ask the server for information not initially
+      loaded in the app package (think 
+        <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('securitynt');">
+          security</a>
+      or communicating with another server or saving something). The other nice thing about a design like that is everything
+      is modular, so if you want to change one thing that should always be visible you only have to change it in one instance
     </p>
-
-    <p>If you'd like to see serverside security in action go to 
-      <a [routerLink]="['/levelEditor']">
-      here</a>
-      and follow the link</p>
+  
+    <p> The old prototype for the level editor is an example of a page built outside of the SPA</p>
   
   <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
   <br>
-  <a [routerLink]="['/']">
+  <a [routerLink]="['/']" >
     <button> Go Back to Main Menu </button>
   </a>
   </div>
-  <div class="aboutStyle" id='gament'>
-      <h2> Game (Non-Technical) </h2>
-      <p> The desktop app for Mochi Jump is a game written in java without the use of any frameworks.
+  <div class="aboutStyle" id='servernt'>
+      <h2> The Server (Non-Technical) </h2>
+      <p> The server is what allows the website to actually do things. A well designed server is critical for a 
+        well functioning web experience as well as for any app that wants to talk to anything more than just itself
       </p>
-      <p>It is just pure java. I had an idea and wrote it (including the actual game engine) entirely from scratch 
-        (except for one text parser, I used JacksonXML for that).</p>
-      <p>This was the project that I used to teach myself core Java, and although I haven't spent any time actively
-        developing it recently. It holds a special place in my heart.
+      <p> The server has many roles. One of the most common roles is that it can store, save, load, and deliver information.
+        It can also perform business logic, which depending on your business could be anything from sending out automated 
+        emails to compiling any kind of concievable report on demand.
+  
+        Creating rules for accessing content is a critical aspect of 
+        <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('securitynt');">
+            security</a>
+      that is controlled by the server.
       </p>
-      <p>It is worth noting that Java isn't a language known for making games. Java is an excellent language 
-        for server development and data manipulation (i.e. getting two strangers to talk to each other). 
-        This is part of the reason I learned so much while making Mochi Jump.
+  
+      <p>I love writing back end code. For the end user it's something that they never see, but always feel. If a web
+        page does anything, it is because the server had code written to allow that functionality. In the case of this
+        website the server has specially written code that allows it to:
+        <li>Have specific user access</li>
+        <li>Have security</li>
+        <li>Save, load, and deliver levels for the Mochi Jump game</li>
+        <li>Send out emails when required</li>
+        <li>And deliver the Web-App in a single package the way it does.</li> 
+      </p>
+      <p>There are many different options for writing server code. I, personally, use Java, cloud computing, and microservices.
+        This gives me the ability to write apps that can scale with demand, and to seperate different functions into different
+        environments to keep things manageable and to allow for rapid development if neccessary. 
       </p>
     
     <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
@@ -164,33 +103,41 @@
       <button> Go Back to Main Menu </button>
     </a>
     </div>
-  <div class="aboutStyle" id='editornt'>
-      <h2> Level Editor (Non-Technical) </h2>
-      <p> Just like designing the desktop game was how I taught myself how to code in core Java, this level editor
-        was the first thing I wrote using native HTML CSS and javascript. Getting the two to talk to each other
-        sent me down the path to learn what I now know.
-      </p>
-    
-    <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
-    <br>
-    <a [routerLink]="['/']">
-      <button> Go Back to Main Menu </button>
-    </a>
-    </div>
-    <div class="aboutStyle" id='stylent'>
-      <h2> Style (Non-Technical) </h2>
-      <p> As I developed this project entirely on my own, I was left to  my own devices and discression for
-        styling. Love it, or hate it, pixel art is significantly easier, and cheaper to create then professional video or
-        photography. The underlying assets used in any kind of app will significantly change the look and feel of that
-        app. If you'd like an example of this click the "Change to HD" text at the bottom right of any page"
-      </p>
-      <p> 
-        I can use any assets and am happy to work with artists on projects. Left to my own devices I can make 
-        simple pixel art images and animations.
+  <div class="aboutStyle" id='securitynt'>
+      <h2> Security (Non-Technical) </h2>
+      <p> There are four major aspects to security:
+       <li> Having the user connect to the webpage securely </li>
+       <li> Having restrictions on what the user can access </li>
+       <li> Control what is sent and when</li>
+       <li> Protecting yourself from potential vulnerabilities </li>
       </p> 
-      Outside of art there there are other aspects of styling, such as font usage, the style and look and feel of
-      forms, boxes, spacing, etc. With regard to that, if someone can draw it, I can code it.
-      <p></p>
+      <p>The first aspect of having the user connect to your site securely is extremely critical. This is the "s"
+      in "https://" and the lock next to the URL in your browser when your on a secure webpage. If those components
+      are missing then anyone can view all the infromation you are sending to the server as well as all the information
+      the server is sending you. So, if you access a webpage that is not encrypted and you give it a username and password,
+      guess what, you just freely shouted out loud that username and password for anyone who cared to listen
+      </p>
+      <p> The second aspect is what people normally think of when they think security. The server has to set the rules
+        with regard to who can access what. It's a  critical component to having security if you need it.
+      </p>
+      <p> The third aspect is where people can get themselves into trouble if they don't think about what they are doing.
+        Under the 
+        <a style="cursor: pointer; color:#0000ff; text-decoration: underline;" (click)="scrollTo('webappnt');">
+            web app</a>
+        section, we talked about a cool feature of modern design where you can send a package that contains the entire
+        website (all pages included) when a user first visits the page. The downside to that is nothing in that package 
+        is secured. All the data and information is given freely. You can design an app that hides this from a browser,
+        but it is still in that package and can be easily found by anyone who knows what they are doing. This is why
+        it is critical that security is kept in mind in all aspects of development.
+      </p>
+      <p> The last aspect is keeping your stuff safe from hackers. To put it simply, if you take certain shortcuts when designing a 
+        server you could open up the potential for someone to inject code where it doesn't belong. 
+      </p>
+  
+      <p>If you'd like to see serverside security in action go to 
+        <a [routerLink]="['/levelEditor']">
+        here</a>
+        and follow the link</p>
     
     <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
     <br>
@@ -198,50 +145,104 @@
       <button> Go Back to Main Menu </button>
     </a>
     </div>
-
-<div class="aboutStyle" id="webappt">
-  <h2> Front End </h2>
-  <p>This is an Angular 6 app. Below please find a link to the github repository if you'd like to see the source code
-  </p>
-   <a href="https://github.com/AndoryuRenoa/MochiJumpWeb-FrontEnd" target ="_blank">MochiJumpWeb-FrontEnd</a>
-   <p></p>
-  <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
-  <br>
-  <a [routerLink]="['/']">
-    <button> Go Back to Main Menu </button>
-  </a>
-</div>
-
-<div class="aboutStyle" id="servert">
-    <h2> Back End </h2>
-    <p> This is being served up via two Java/Spring-boot microservices. One is hosted on Google Cloud (Compute Engine) the 
-    other is on AWS (Elastic Beanstalk). Peristance is done with MySQL.
+    <div class="aboutStyle" id='gament'>
+        <h2> Game (Non-Technical) </h2>
+        <p> The desktop app for Mochi Jump is a game written in java without the use of any frameworks.
+        </p>
+        <p>It is just pure java. I had an idea and wrote it (including the actual game engine) entirely from scratch 
+          (except for one text parser, I used JacksonXML for that).</p>
+        <p>This was the project that I used to teach myself core Java, and although I haven't spent any time actively
+          developing it recently. It holds a special place in my heart.
+        </p>
+        <p>It is worth noting that Java isn't a language known for making games. Java is an excellent language 
+          for server development and data manipulation (i.e. getting two strangers to talk to each other). 
+          This is part of the reason I learned so much while making Mochi Jump.
+        </p>
+      
+      <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
+      <br>
+      <a [routerLink]="['/']">
+        <button> Go Back to Main Menu </button>
+      </a>
+      </div>
+    <div class="aboutStyle" id='editornt'>
+        <h2> Level Editor (Non-Technical) </h2>
+        <p> Just like designing the desktop game was how I taught myself how to code in core Java, this level editor
+          was the first thing I wrote using native HTML CSS and javascript. Getting the two to talk to each other
+          sent me down the path to learn what I now know.
+        </p>
+      
+      <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
+      <br>
+      <a [routerLink]="['/']">
+        <button> Go Back to Main Menu </button>
+      </a>
+      </div>
+      <div class="aboutStyle" id='stylent'>
+        <h2> Style (Non-Technical) </h2>
+        <p> As I developed this project entirely on my own, I was left to  my own devices and discression for
+          styling. Love it, or hate it, pixel art is significantly easier, and cheaper to create then professional video or
+          photography. The underlying assets used in any kind of app will significantly change the look and feel of that
+          app. If you'd like an example of this click the "Change to HD" text at the bottom right of any page"
+        </p>
+        <p> 
+          I can use any assets and am happy to work with artists on projects. Left to my own devices I can make 
+          simple pixel art images and animations.
+        </p> 
+        Outside of art there there are other aspects of styling, such as font usage, the style and look and feel of
+        forms, boxes, spacing, etc. With regard to that, if someone can draw it, I can code it.
+        <p></p>
+      
+      <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
+      <br>
+      <a [routerLink]="['/']">
+        <button> Go Back to Main Menu </button>
+      </a>
+      </div>
+  
+  <div class="aboutStyle" id="webappt">
+    <h2> Front End </h2>
+    <p>This is an Angular 6 app. Below please find a link to the github repository if you'd like to see the source code
     </p>
-    <p>Below please find a link to the github repository if you'd like to see the source code</p>
-     <a href="https://github.com/AndoryuRenoa/MochiJumpWeb-Backend" target ="_blank">MochiJumpWeb-BackEnd</a>
-    <p> I used the Front-End-Maven plugin to get Spring to serve up the angular app</p>
+     <a href="https://github.com/AndoryuRenoa/MochiJumpWeb-FrontEnd" target ="_blank">MochiJumpWeb-FrontEnd</a>
+     <p></p>
     <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
     <br>
     <a [routerLink]="['/']">
       <button> Go Back to Main Menu </button>
     </a>
   </div>
-  <div class="aboutStyle" id="gamet">
-      <h2> Mochi Jump Java App </h2>
-      <p> As stated in the non techincal portion. This was my first large core java application. After making a few simple
-        apps I decided to make something more complicated to really push myself. Making this taught me the true fundamentals
-        of OOP and OOD. Below is a link to the repo containing the source code. As of Nov 2018, it has been a few months since I've changed
-        anything. Please keep in mind that I started this project just one month into my self study of programming. There is some
-        weirdness (espcially naming conventions) that I introduced early on that I did out of ignorance and would not have done
-        if I started the project again.
+  
+  <div class="aboutStyle" id="servert">
+      <h2> Back End </h2>
+      <p> This is being served up via two Java/Spring-boot microservices. One is hosted on Google Cloud (Compute Engine) the 
+      other is on AWS (Elastic Beanstalk). Peristance is done with MySQL.
       </p>
-      <p> That being said, I'm still pretty pleased with it and have no problem showing it off.</p>
       <p>Below please find a link to the github repository if you'd like to see the source code</p>
-       <a href="https://github.com/AndoryuRenoa/MochiJump" target ="_blank">MochiJump - Java App</a>
-      <p></p>
+       <a href="https://github.com/AndoryuRenoa/MochiJumpWeb-Backend" target ="_blank">MochiJumpWeb-BackEnd</a>
+      <p> I used the Front-End-Maven plugin to get Spring to serve up the angular app</p>
       <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
       <br>
       <a [routerLink]="['/']">
         <button> Go Back to Main Menu </button>
       </a>
     </div>
+    <div class="aboutStyle" id="gamet">
+        <h2> Mochi Jump Java App </h2>
+        <p> As stated in the non techincal portion. This was my first large core java application. After making a few simple
+          apps I decided to make something more complicated to really push myself. Making this taught me the true fundamentals
+          of OOP and OOD. Below is a link to the repo containing the source code. As of Nov 2018, it has been a few months since I've changed
+          anything. Please keep in mind that I started this project just one month into my self study of programming. There is some
+          weirdness (espcially naming conventions) that I introduced early on that I did out of ignorance and would not have done
+          if I started the project again.
+        </p>
+        <p> That being said, I'm still pretty pleased with it and have no problem showing it off.</p>
+        <p>Below please find a link to the github repository if you'd like to see the source code</p>
+         <a href="https://github.com/AndoryuRenoa/MochiJump" target ="_blank">MochiJump - Java App</a>
+        <p></p>
+        <button (click)="scrollTo('toc');"> Go Back to Table of Contents </button>
+        <br>
+        <a [routerLink]="['/']">
+          <button> Go Back to Main Menu </button>
+        </a>
+      </div>
