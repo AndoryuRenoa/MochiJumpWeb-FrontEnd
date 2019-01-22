@@ -15,7 +15,7 @@ export class AppComponent {
   showAppLogout: boolean;
   hd: boolean;
   hdStatus: String = "Change to HD";
-  bgSource = "images/background.gif";
+  bgSource = "assets/images/background.gif";
  
   constructor(private showLoginService: ShowLoginService, private showLogout: ShowLogoutService,
     private hdget: SwitchToHdService){
@@ -36,11 +36,11 @@ export class AppComponent {
     if (!this.hd){
       this.hdStatus = "Change to 8-bit Style";
       this.hdget.changeHDStatus(true);
-      this.bgSource="images/skyhd.jpeg";
+      this.bgSource="assets/images/skyhd.jpeg";
     }else {
       this.hdStatus = "Change to HD";
       this.hdget.changeHDStatus(false);
-      this.bgSource = "images/background.gif";
+      this.bgSource = "assets/images/background.gif";
     }
   }
 
